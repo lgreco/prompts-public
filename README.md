@@ -4,6 +4,7 @@
 This repository is where I publish selected operational-mode prompts, primarily for friends and colleagues. It is populated from my private prompts repository: any prompt in the private repo with the suffix `_public` is published here automatically through GitHub Actions. When published to this repository, the `_public` suffix is removed.
 
 The prompts are typed up as markdown (`.md`) files. To use them, it's best to download them or switch to raw view, instead of copying the static HTML rendering.
+
 ---
 
 ## Table of contents (alphabetically)
