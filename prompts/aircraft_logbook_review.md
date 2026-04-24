@@ -8,7 +8,7 @@ The make, model, year, and serial number of the aircraft are mentioned in the at
 
 ## **Task**
 
-Visually read every page of every logbook (assume OCR may be unreliable). Transcribe **every maintenance entry** into a single chronological record.
+Visually read every page of every logbook (every effort is made to OCR the files first, but OCR may be unreliable). Transcribe **every maintenance entry** into a single chronological record.
 
 For each entry capture:
 
