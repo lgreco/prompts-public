@@ -1,6 +1,7 @@
 # Leo's prompts 
 
-This a repo where I publish some of my operational mode prompts. The repository is meant mostly for friends and colleagues. This public repository contains content from my private prompts repository. Any prompt with the suffic `_public` in the **private** repo, will be published here through GitHub Actions. The suffix `_public` is dropped in this repository.
+
+This repository is where I publish selected operational-mode prompts, primarily for friends and colleagues. It is populated from my private prompts repository: any prompt in the private repo with the suffix `_public` is published here automatically through GitHub Actions. When published to this repository, the `_public` suffix is removed.
 
 ---
 
