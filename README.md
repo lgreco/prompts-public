@@ -15,7 +15,7 @@ Any improvement suggestions (or pull requests) are greatly appreciated and enthu
 
 ---
 
-**Note to self:** when Personal Access Token expires, go to [github.com/settings/tokens](github.com/settings/tokens), create a new one, copy it, execute
+**Note to self:** when a Personal Access Token expires, go to [github.com/settings/tokens](github.com/settings/tokens), create a new one, copy it, execute
 ```bash
 gh secret set PUBLIC_REPO_PAT --repo lgreco/prompts --body "<new-token>"
 ```
