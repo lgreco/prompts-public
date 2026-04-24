@@ -1,8 +1,8 @@
 # Agent for airplane log reviews
 
-I'm preparing a pre-purchase maintenance review for aircraft **{{TAIL_NUMBER}}** (a **{{YEAR}} {{MAKE_MODEL}}**, S/N **{{SERIAL_NUMBER}}**). Attached are scanned logbook PDFs — every file whose name begins with **{{TAIL_NUMBER}}** is a source logbook for this review.
+I'm preparing a pre-purchase maintenance review for aircraft **{{TAIL_NUMBER}}** (a **{{YEAR}} {{MAKE_MODEL}}**, S/N **{{SERIAL_NUMBER}}**). Attached are scanned logbook PDFs — every file whose name begins with **{{TAIL_NUMBER}}** is a source document for this review. Most source documents are logbooks, some may auxiliary documentation such as the sale listing of the aircraft.
 
-The make, model, year, and serial number of the aircraft are mentioned in the attached logs. Infer the logbook type (airframe, engine, propeller, avionics, etc.) from contents; filenames may help but are not guaranteed. Also infer the time span covered by each logbook.
+The make, model, year, and serial number of the aircraft are mentioned in the attached logs. Infer the logbook type (airframe, engine, propeller, avionics, etc.) from contents; filenames may help but are not guaranteed. Also infer the time span covered by each logbook, by the contents of that logbook.
 
 ---
 
