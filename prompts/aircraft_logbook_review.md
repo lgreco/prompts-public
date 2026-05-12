@@ -1,6 +1,6 @@
 # Agent for airplane log reviews
 
-## **Preamble: Template Variables**
+## Preamble: Template Variables
 
 | Variable | Value |
 |----------|-------|
@@ -18,9 +18,11 @@ The make, model, year, and serial number of the aircraft are mentioned in the at
 
 ---
 
-## **Transcript Caching**
+## Transcript Caching
 
-Before visually processing any source file, check whether a plain-text transcript already exists for it in the same folder. Transcripts are named by prepending `text_transcript_of_` to the original filename (retaining the original extension as part of the name separated by an underscore instead of a dot) and appending `.txt`:
+Transcripts are plain-text renderings of source files, stored between runs in a zip archive so that previously processed files never need to be re-read visually.
+
+**Transcript filename convention** — each transcript is named by prepending `text_transcript_of_` to the original filename, replacing the dot before the extension with an underscore, and appending `.txt`:
 
 ```
 text_transcript_of_<original_filename>_<ext>.txt
@@ -28,18 +30,36 @@ text_transcript_of_<original_filename>_<ext>.txt
 
 For example: `text_transcript_of_N12345_airframe_log_pdf.txt`
 
+**Archive name convention:**
+
+```
+{{TAIL_NUMBER}}_text_transcripts.zip
+```
+
+For example: `N12345_text_transcripts.zip`
+
 **On each run:**
 
-1. For each source file, look for its corresponding `text_transcript_of_…txt` file in the same folder.
-2. If a transcript exists, use it as the text for that file — **do not re-process it visually**.
-3. If no transcript exists, visually read the source file and **write a transcript immediately**, before proceeding to the next file.
-4. Only source files that lack a transcript require visual processing; files added since the last run are recognized by the absence of a corresponding transcript.
+1. Check whether the user has attached a file named `{{TAIL_NUMBER}}_text_transcripts.zip`.
+2. If the zip is present, unpack it in memory and load all transcripts it contains.
+3. For each source file, check whether a matching transcript was found in the zip.
+   - If yes: use that transcript — **do not re-process the source file visually**.
+   - If no: visually read the source file and generate its transcript now, before moving to the next file.
+4. After all source files have been processed, determine whether any new transcripts were generated this run.
+   - If **no new transcripts**: proceed directly to the review — do not produce a zip.
+   - If **new transcripts were generated**: assemble a new zip containing **all** transcripts (pre-existing ones from the user-supplied zip plus every newly generated one) and **return this zip to the user** at the end of the session, before the PDF. Label it clearly: `{{TAIL_NUMBER}}_text_transcripts.zip`. Instruct the user to save this file and attach it on the next run to avoid re-processing the same source files.
 
 **Transcript content:** A faithful plain-text rendering of the entire source document — every legible entry, date, tach reading, maintenance description, and signer — with `[?]` markers for uncertain readings and explicit notes for missing, torn, or skipped pages.
 
+### Transcription Rules
+
+* For unclear handwriting: transcribe best effort and mark uncertainty with `[?]`
+* If pages are missing/torn/skipped: explicitly note
+* Do not silently infer or "clean up" ambiguous technical details
+
 ---
 
-## **Sale Listing as Trusted Source**
+## Sale Listing as Trusted Source
 
 If any attached file is identified as a **sale listing** (e.g., a broker listing, Trade-A-Plane entry, controller.com page, or similar market document):
 
@@ -62,9 +82,9 @@ If any attached file is identified as a **sale listing** (e.g., a broker listing
 
 ---
 
-## **Task**
+## Task
 
-Using transcripts where available (see **Transcript Caching**) and visually reading only source files that lack a transcript (every effort is made to OCR files first, but OCR may be unreliable), compile **every maintenance entry** into a single chronological record.
+Using transcripts where available (see **Transcript Caching**) and visually reading only source files that lack a transcript, compile **every maintenance entry** into a single chronological record.
 
 For each entry capture:
 
@@ -75,15 +95,9 @@ For each entry capture:
 * Category tag from:
   **AF, ENG, PROP, AVX, INSP, GEAR, DOC, GAP**
 
-### **Transcription Rules**
-
-* For unclear handwriting: transcribe best effort and mark uncertainty with `[?]`
-* If pages are missing/torn/skipped: explicitly note
-* Do not silently infer or “clean up” ambiguous technical details
-
 ---
 
-## **Category Tag Definitions**
+## Category Tag Definitions
 
 | Tag | Meaning | Notes |
 |-----|---------|-------|
@@ -98,7 +112,7 @@ For each entry capture:
 
 ---
 
-## **Gap Detection**
+## Gap Detection
 
 * Identify periods ≥13 months with no entries
 * Insert a **GAP row**:
@@ -110,7 +124,7 @@ For each entry capture:
 
 ---
 
-## **Compression Test Data**
+## Compression Test Data
 
 * Scan all engine log entries for compression test results. These typically appear as per-cylinder readings in the form `72/80` (measured / reference) and are most often recorded during annual inspections or pre-purchase inspections.
 * Collect every test found. For the Cover Page, present the **5 most recent tests in reverse chronological order**.
@@ -119,7 +133,7 @@ For each entry capture:
 
 ---
 
-## **Annual Inspection Status**
+## Annual Inspection Status
 
 * Identify the most recent logbook entry that is an **annual inspection** — look for phrases such as "annual inspection," "annual," "FAR 91.409," or equivalent. Do not confuse with 100-hour inspections or progressive inspections.
 * An annual is valid for **12 calendar months** from the month it was performed. An annual completed in March 2024, for example, remains valid through March 31, 2025.
@@ -131,7 +145,7 @@ For each entry capture:
 
 ---
 
-## **Missing Logbooks**
+## Missing Logbooks
 
 **Expected logbooks for any single-engine piston GA aircraft:**
 
@@ -152,9 +166,9 @@ For each entry capture:
 
 ---
 
-## **Output: Generate a single PDF (ReportLab)**
+## PDF Generation (ReportLab)
 
-### **Global Layout Constraints (MANDATORY)**
+### Global Layout Constraints (MANDATORY)
 
 These are critical to prevent formatting failures:
 
@@ -173,7 +187,7 @@ These are critical to prevent formatting failures:
 
 ---
 
-## **Typography (STRICT)**
+## Typography (STRICT)
 
 * **Body text:** 11 pt serif (e.g., Times-Roman)
 * **Headers:** Helvetica (bold where appropriate)
@@ -183,9 +197,9 @@ These are critical to prevent formatting failures:
 
 ---
 
-## **Document Structure**
+## Document Structure
 
-### **1. Cover Page**
+### 1. Cover Page
 
 Include:
 
@@ -209,14 +223,14 @@ Include:
 
 ---
 
-### **2. About This Document**
+### 2. About This Document
 
 * Paragraph 1: schema description
 * Paragraph 2: note gaps and missing logs
 
 ---
 
-### **3. Chronology**
+### 3. Chronology
 
 * Group entries by **year**
 * Strict chronological order
@@ -228,7 +242,7 @@ Each entry rendered as a **row with controlled layout**:
 * Right (flex, wrapped): Summary
 * Mechanic/shop: italicized line below summary
 
-#### **Table Requirements**
+#### Table Requirements
 
 * Column widths must be explicitly defined and sum ≤ usable page width
 * Summary column must wrap (never overflow)
@@ -237,7 +251,7 @@ Each entry rendered as a **row with controlled layout**:
 
 ---
 
-### **4. Preliminary Recommendation**
+### 4. Preliminary Recommendation
 
 Short, direct:
 
@@ -253,7 +267,7 @@ Short, direct:
 
 ---
 
-### **5. Appendix: Summary Statistics**
+### 5. Appendix: Summary Statistics
 
 Two-column table:
 
@@ -271,13 +285,13 @@ Two-column table:
 
 ---
 
-### **6. Disclaimer**
+### 6. Disclaimer
 
 Standard non-authoritative transcription disclaimer
 
 ---
 
-## **Styling**
+## Styling
 
 * Header bar on every page (except cover):
 
@@ -301,7 +315,7 @@ Standard non-authoritative transcription disclaimer
 
 ---
 
-## **Final QA Pass (REQUIRED)**
+## Final QA Pass (REQUIRED)
 
 Before producing the final PDF, perform a **format validation step**:
 
@@ -338,11 +352,16 @@ Before producing the final PDF, perform a **format validation step**:
 
 ---
 
-## **Output Requirement**
+## Output Requirement
 
 Use the ReportLab template below.
 
-Return **only the final PDF** (well-formatted, print-ready). Do not include intermediate artifacts.
+Return outputs in this order:
+
+1. **Transcript zip** (`{{TAIL_NUMBER}}_text_transcripts.zip`) — only if new transcripts were generated this run (see **Transcript Caching**). Instruct the user to save it and attach it on the next run.
+2. **Final PDF** — well-formatted, print-ready. Do not include intermediate artifacts.
+
+---
 
 ## ReportLab Template
 
