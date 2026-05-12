@@ -1,14 +1,70 @@
 # Agent for airplane log reviews
 
+## **Preamble: Template Variables**
+
+| Variable | Value |
+|----------|-------|
+| `{{CLUB_NAME}}` | Fox Flying Club |
+| `{{TAIL_NUMBER}}` | *(set at runtime)* |
+| `{{YEAR}}` | *(set at runtime)* |
+| `{{MAKE_MODEL}}` | *(set at runtime)* |
+| `{{SERIAL_NUMBER}}` | *(set at runtime)* |
+
+---
+
 I'm preparing a pre-purchase maintenance review for aircraft **{{TAIL_NUMBER}}** (a **{{YEAR}} {{MAKE_MODEL}}**, S/N **{{SERIAL_NUMBER}}**). Attached are scanned logbook PDFs — every file whose name begins with **{{TAIL_NUMBER}}** is a source document for this review. Most source documents are logbooks, some may be auxiliary documentation such as the sale listing of the aircraft.
 
 The make, model, year, and serial number of the aircraft are mentioned in the attached logs. Infer the logbook type (airframe, engine, propeller, avionics, etc.) from contents; filenames may help but are not guaranteed. Also infer the time span covered by each logbook, by the contents of that logbook.
 
 ---
 
+## **Transcript Caching**
+
+Before visually processing any source file, check whether a plain-text transcript already exists for it in the same folder. Transcripts are named by prepending `text_transcript_of_` to the original filename (retaining the original extension as part of the name separated by an underscore instead of a dot) and appending `.txt`:
+
+```
+text_transcript_of_<original_filename>_<ext>.txt
+```
+
+For example: `text_transcript_of_N12345_airframe_log_pdf.txt`
+
+**On each run:**
+
+1. For each source file, look for its corresponding `text_transcript_of_…txt` file in the same folder.
+2. If a transcript exists, use it as the text for that file — **do not re-process it visually**.
+3. If no transcript exists, visually read the source file and **write a transcript immediately**, before proceeding to the next file.
+4. Only source files that lack a transcript require visual processing; files added since the last run are recognized by the absence of a corresponding transcript.
+
+**Transcript content:** A faithful plain-text rendering of the entire source document — every legible entry, date, tach reading, maintenance description, and signer — with `[?]` markers for uncertain readings and explicit notes for missing, torn, or skipped pages.
+
+---
+
+## **Sale Listing as Trusted Source**
+
+If any attached file is identified as a **sale listing** (e.g., a broker listing, Trade-A-Plane entry, controller.com page, or similar market document):
+
+* Use the sale listing as the **authoritative source** for:
+
+  * **Total Time Airframe (TTAF)**
+  * **Engine time since overhaul** and **overhaul type**:
+
+    * **SFOH** — factory new or factory-remanufactured overhaul
+    * **SMOH** — major overhaul performed by a repair station or A&P
+    * **STOH** — top overhaul (cylinders only; not a full teardown)
+    * **SFRM** — since factory remanufacture
+    * Other designations (SNEW, SREM, etc.) as stated in the listing
+  * **Avionics** — treat the listing's equipment description as the reference inventory for installed avionics
+  * **Asking price** — record as stated in the listing
+
+* When logbook entries **conflict** with the sale listing on any of the above, **defer to the sale listing** and flag the discrepancy: note it in the affected chronology row and summarize all conflicts on the Cover Page.
+
+* If no sale listing is present, derive TTAF, engine time, overhaul type, and avionics from the logbooks and note that the logbooks are the sole source.
+
+---
+
 ## **Task**
 
-Visually read every page of every logbook (every effort is made to OCR the files first, but OCR may be unreliable). Transcribe **every maintenance entry** into a single chronological record.
+Using transcripts where available (see **Transcript Caching**) and visually reading only source files that lack a transcript (every effort is made to OCR files first, but OCR may be unreliable), compile **every maintenance entry** into a single chronological record.
 
 For each entry capture:
 
@@ -27,24 +83,72 @@ For each entry capture:
 
 ---
 
+## **Category Tag Definitions**
+
+| Tag | Meaning | Notes |
+|-----|---------|-------|
+| **AF** | Airframe | Structural work, control surfaces, skin, doors, windows, and general airframe maintenance not covered by another category |
+| **ENG** | Engine | All powerplant work: oil changes, cylinder work, magnetos, carburetor or fuel injection, exhaust, engine mounts |
+| **PROP** | Propeller | Propeller inspections, overhauls, replacements, and strike reports |
+| **AVX** | Avionics | Radios, navigation equipment, transponder, autopilot, ELT, and panel work |
+| **INSP** | Inspection | Annual inspections, 100-hour inspections, progressive inspections, and pre-purchase inspections |
+| **GEAR** | Landing gear | Struts, wheels, brakes, tires, and fairings on all aircraft. On retractable-gear aircraft (e.g., PA-28R Piper Arrow), also includes actuators, gear doors, hydraulics, and squat switches — and any gear-up incident. On fixed-gear aircraft (e.g., PA-28A Piper Archer, C172 Cessna Skyhawk), flag any entry suggesting a gear collapse or hard landing involving the gear. GEAR entries are always significant and must be noted in the Preliminary Recommendation. |
+| **DOC** | Documentation | Ownership transfers, registration updates, weight-and-balance revisions, 337 forms, STC records, and other administrative entries |
+| **GAP** | Coverage gap | Synthesized row — not a real logbook entry — marking a period of ≥13 months with no entries |
+
+---
+
 ## **Gap Detection**
 
 * Identify periods ≥13 months with no entries
 * Insert a **GAP row**:
 
   * Show date span
-  * Estimate hours flown (if possible)
+  * Estimate hours flown by interpolating from the tach or total-time readings that immediately precede and follow the gap; if no bracketing readings are available, leave the estimate blank
 * GAP rows must be visually distinct (see Styling)
 * Do **not** interpret or editorialize about gaps
 
 ---
 
+## **Compression Test Data**
+
+* Scan all engine log entries for compression test results. These typically appear as per-cylinder readings in the form `72/80` (measured / reference) and are most often recorded during annual inspections or pre-purchase inspections.
+* Collect every test found. For the Cover Page, present the **5 most recent tests in reverse chronological order**.
+* Preserve the exact per-cylinder readings as recorded. If cylinder numbering is shown, include it (e.g., `C1: 72/80, C2: 74/80, …`). If only a string of values is given with no cylinder labels, transcribe them in the order recorded.
+* If no compression data is found in the logs, note its absence on the Cover Page.
+
+---
+
+## **Annual Inspection Status**
+
+* Identify the most recent logbook entry that is an **annual inspection** — look for phrases such as "annual inspection," "annual," "FAR 91.409," or equivalent. Do not confuse with 100-hour inspections or progressive inspections.
+* An annual is valid for **12 calendar months** from the month it was performed. An annual completed in March 2024, for example, remains valid through March 31, 2025.
+* Compute validity against today's date:
+
+  * **Current** — note the expiration month and year in the Key Specifications block and the Cover Page.
+  * **Lapsed** — flag as a **blocking issue** (see Preliminary Recommendation). State how many months ago it expired.
+  * **Indeterminate** — if no clear annual can be identified in the logs, state that explicitly on the Cover Page and treat it as a blocking issue.
+
+---
+
 ## **Missing Logbooks**
 
-If expected logs are absent:
+**Expected logbooks for any single-engine piston GA aircraft:**
 
-* State clearly on **Cover Page**
+* Airframe log — always required
+* Engine log — always required
+* Propeller log — always required
+
+**Additional expected records for specific aircraft types:**
+
+* Retractable-gear aircraft (e.g., PA-28R): gear and hydraulic system service history. If no dedicated gear log exists, check whether gear-related entries appear in the airframe log. Flag if absent.
+* Aircraft with a factory-installed or STC'd autopilot or significant avionics suite: an avionics log is desirable. Its absence is notable but not blocking.
+
+**If any expected log is absent:**
+
+* State clearly on the **Cover Page**
 * Repeat in **About This Document**
+* Treat a missing airframe or engine log as a **blocking issue** (see Preliminary Recommendation)
 
 ---
 
@@ -86,6 +190,14 @@ These are critical to prevent formatting failures:
 Include:
 
 * Tail number, aircraft info
+* Asking price (if sale listing is present)
+* **Key Specifications** block (table format, prominently placed):
+
+  * TTAF — total time airframe (source: sale listing or logbook)
+  * Engine time since overhaul and overhaul type (SMOH / SFOH / STOH / etc.)
+  * Prop time (if available)
+  * Most recent annual inspection date and whether it is currently valid
+* **Compression Tests** — 5 most recent results in reverse chronological order (table format: date + per-cylinder readings). If none found, state explicitly.
 * Coverage span (earliest → latest entry)
 * Bullet list of source logs:
 
@@ -132,6 +244,12 @@ Short, direct:
 * Should the club consider purchase?
 * Identify risks and notable concerns
 * No excessive narrative
+* **Blocking issues** — conditions that by themselves warrant not proceeding without resolution — must be listed first and labeled **BLOCKING**. Blocking conditions include:
+
+  * Lapsed or indeterminate annual inspection
+  * Missing airframe or engine log
+  * Any gear-up or gear-collapse incident (GEAR entries) without documented repair and return to service
+  * Engine or prop with no documented overhaul history
 
 ---
 
@@ -139,13 +257,14 @@ Short, direct:
 
 Two-column table:
 
+* Asking price (from sale listing, if present)
 * Total entries
 * Coverage span
 * Airframe TT (first/latest)
 * Hours flown
 * Entries per category
 * GAP periods (count + list)
-* Engine overhauls
+* Engine overhauls (with overhaul type: SFOH / SMOH / STOH / SFRM / etc., and source: sale listing or logbook)
 * Prop replacements
 * Tach resets
 * Ownership/location indicators
@@ -383,8 +502,8 @@ def chronology_row(entry, styles):
         [row],
         colWidths=[
             1.15 * inch,          # Date / tach
-            0.45 * inch,          # Category pill
-            USABLE_WIDTH - 1.60 * inch  # Wrapped summary
+            0.60 * inch,          # Category pill (wide enough for "PROP" at 8pt with padding)
+            USABLE_WIDTH - 1.75 * inch  # Wrapped summary
         ],
         splitByRow=True,
         repeatRows=0,
@@ -440,6 +559,8 @@ def build_pdf(
     aircraft_id,
     source_short,
     cover_info,
+    key_specs,            # list of (label, value) pairs for Key Specifications block
+    compression_tests,    # list of (date, readings_string) pairs, newest first; may be empty
     source_logs,
     chronology_by_year,
     recommendation,
@@ -473,6 +594,18 @@ def build_pdf(
     )))
 
     story.append(Paragraph(cover_info, styles["Body11"]))
+    story.append(Spacer(1, 12))
+
+    if key_specs:
+        story.append(Paragraph("Key Specifications", styles["Header"]))
+        story.append(stats_table(key_specs, styles))
+        story.append(Spacer(1, 12))
+
+    story.append(Paragraph("Compression Tests", styles["Header"]))
+    if compression_tests:
+        story.append(stats_table(compression_tests, styles))
+    else:
+        story.append(Paragraph("No compression test data found in logs.", styles["Body11"]))
     story.append(Spacer(1, 12))
 
     story.append(Paragraph("Source Logbooks Consolidated", styles["Header"]))
@@ -516,7 +649,7 @@ def build_pdf(
     story.append(PageBreak())
 
     # Recommendation
-    story.append(Paragraph("Preliminary Recommendation to the Board of Fox Flying Club", styles["Header"]))
+    story.append(Paragraph("Preliminary Recommendation to the Board of {{CLUB_NAME}}", styles["Header"]))
     story.append(Paragraph(recommendation, styles["Body11"]))
 
     story.append(PageBreak())
