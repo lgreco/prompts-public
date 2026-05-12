@@ -12,7 +12,13 @@
 
 ---
 
-I'm preparing a pre-purchase maintenance review for aircraft **{{TAIL_NUMBER}}** (a **{{YEAR}} {{MAKE_MODEL}}**, S/N **{{SERIAL_NUMBER}}**). Attached are scanned logbook PDFs — every file whose name begins with **{{TAIL_NUMBER}}** is a source document for this review. Most source documents are logbooks, some may be auxiliary documentation such as the sale listing of the aircraft.
+I'm preparing a pre-purchase maintenance review for aircraft **{{TAIL_NUMBER}}** (a **{{YEAR}} {{MAKE_MODEL}}**, S/N **{{SERIAL_NUMBER}}**). Attached are source documents for this review. Source files may be supplied in any of the following forms:
+
+* **PDF files** — scanned logbook pages or typed records
+* **Image files** — JPEG, PNG, TIFF, or similar scans
+* **A ZIP archive** — a compressed collection of PDFs and/or image files; unpack it in memory, recursing into any nested folders, and treat every file found at any depth as a source document (do not confuse with the transcript cache archive described below)
+
+Every file — or, if a ZIP archive is supplied, every file extracted from it — whose name begins with **{{TAIL_NUMBER}}** is a source document for this review. Most source documents are logbooks; some may be auxiliary documentation such as the sale listing of the aircraft.
 
 The make, model, year, and serial number of the aircraft are mentioned in the attached logs. Infer the logbook type (airframe, engine, propeller, avionics, etc.) from contents; filenames may help but are not guaranteed. Also infer the time span covered by each logbook, by the contents of that logbook.
 
