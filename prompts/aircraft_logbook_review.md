@@ -57,6 +57,17 @@ For example: `N12345_text_transcripts.zip`
 
 **Transcript content:** A faithful plain-text rendering of the entire source document — every legible entry, date, tach reading, maintenance description, and signer — with `[?]` markers for uncertain readings and explicit notes for missing, torn, or skipped pages.
 
+### How to Read Source Files — CRITICAL
+
+Reading source files is a **direct vision task, not a coding task**. When you encounter an image or PDF page:
+
+* Look at it with your **own built-in multimodal vision**, exactly as you would read any image attached to a conversation
+* **Do NOT write or execute code** that calls pytesseract, Tesseract, EasyOCR, PIL, or any other OCR library or subprocess
+* **Do NOT invoke any external tool** to extract text from images
+* Your transcript is what **you** see and read yourself — not the output of any program
+
+The phrase "visually read the source file" means: use your vision to read the image directly. Logbook pages are predominantly handwritten; automated OCR tools handle handwriting poorly and will produce garbled output. Your native vision is the correct and only method.
+
 ### Transcription Rules
 
 * For unclear handwriting: transcribe best effort and mark uncertainty with `[?]`
