@@ -54,4 +54,10 @@ Produce a set of jokes in `output.md`, in the same directory as this file. Do no
 
 Write each joke in the classic "walked into a bar" form: "A Greek, a Dutchman, and a German walk into `<venue>`" (choose a fitting venue per joke — it doesn't need to be a bar). Permutate the order of the three nationalities across jokes so no single ordering dominates. Number the jokes in the order generated, continuing from the highest-numbered joke already under the most recent attempt heading in `output.md`. Add a new heading above the new jokes naming this the next attempt (e.g. `# Second attempt`) — do not overwrite or remove earlier attempts.
 
-For baseline, write a few jokes about a German, a Dutchman, and a Dutch, absent of context given above for the specific individuals.
+For baseline, write a few jokes about a German, a Dutchman, and a Greek, absent of the context given above for the specific individuals — draw instead on classic, generic national stereotypes:
+
+* **German** — punctual and precise; efficient and rule-following; treats small tasks (ordering, scheduling) with engineering rigor
+* **Dutchman** — frugal and direct; blunt to the point of bluntness being the joke; comfortable talking about money and prices in mixed company
+* **Greek** — warm and hospitable to a fault; large extended family always in the picture; talks over others, especially about food, home, or his own opinion
+
+Place baseline jokes under their own `# Baseline` heading in `output.md`, numbered separately from the attempt sequence (restarting at 1) so they read as a distinct, one-off set rather than another attempt. Keep the same "walked into a bar" form and nationality-order permutation as the main jokes. Do not regenerate baseline jokes on repeat runs unless asked — leave the existing baseline section untouched.
