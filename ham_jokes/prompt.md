@@ -13,8 +13,8 @@ All three are licensed ham radio operators in the US. They live in or near Chica
 ## Characters
 
 * **The German**
-  * Born 1954 in Mannheim; been licensed since 1972, got his US license in 1987 on a military base in Germany, and upgraded all the way to Extra by 2008
-  * Moved to Illinois in 1990 for work; now an applications engineer for building automation systems at Siemens in Buffalo Grove, IL
+  * Born in Mannheim; licensed in Germany since his teenage years, got his US license on a military base in Germany, and eventually upgraded all the way to Extra
+  * Moved to Illinois for work; now an applications engineer for building automation systems at Siemens in Buffalo Grove, IL
   * Build Club Lead at the North Shore Radio Club — builds ham gear from commercial kits and from scratch
   * Serious, well-equipped station: two ICOM 7300s (one on a grounded Butternut HV9 for 80/40/20/15/10m, one on an 18ft elevated vertical with tuner for 60/30/17/12m), plus an FT-991A parked on 6m FT8 watching for band openings; portable kit is a 599Labs TX500/PA500 with a Cameleon vertical; FT8 is his favorite mode on any band
   * Brilliant engineer
@@ -25,22 +25,22 @@ All three are licensed ham radio operators in the US. They live in or near Chica
 
 * **The Dutchman**
   * Lives in Lake Forest, IL; member of the North Shore Radio Club
-  * Newest to the hobby of the three — passed his Technician and General exams in August 2024 and is still working his way up through HF
+  * Newest to the hobby of the three — recently passed his Technician and General exams and is still working his way up through HF
   * Listens to the Netherlands net on DMR (BM TG204)
   * Skilled IT executive
   * Passionate about cars with an excessive number of cylinders (anything more than 4 is excessive)
   * Speaks French
   * Grew up in the Netherlands, lived in France, then moved to the US (NY, then IL)
-  * Former sailing instructor who raced sailboats up to 60ft in Europe; owned several boats on Long Island Sound and Lake Michigan but has been "boatless" since 2021 — still races occasionally with friends on Lake Michigan
-  * Took up electric guitar later in life, starting in 2014
+  * Former sailing instructor who raced sailboats up to 60ft in Europe; owned several boats on Long Island Sound and Lake Michigan but is currently "boatless" — still races occasionally with friends on Lake Michigan
+  * Took up electric guitar later in life
 
 * **The Greek**
-  * Born 1967; first licensed in Greece in the 1980s, returned to the hobby in 2004
+  * First licensed in Greece as a young man, then returned to the hobby years later after a long break
   * Background in Physics and Computer Engineering; career in higher education as professor, dean, and now provost
   * Runs two stations, both built around ICOM 7300s: one in Chicago, one on Washington Island, WI — a rare, sparsely-hammed grid (EN65mj, USIA WI001L) reachable only by ferry, which makes him a minor DX celebrity a few times a year
   * A collector at heart: still owns and occasionally fires up his first radio (an ICOM 730), plus a fully operational Collins KWM-1; portable ops run through a well-worn ICOM 706
-  * QSLs almost exclusively via LOTW since 2020 — except for Washington Island activations, where he still does paper cards
-  * Member of the North Shore Radio Club and ARRL; earned an ARRL Digital DXCC in 2014 and a Digital WAS shortly after
+  * QSLs almost exclusively via LOTW nowadays — except for Washington Island activations, where he still does paper cards
+  * Member of the North Shore Radio Club and ARRL; earned an ARRL Digital DXCC and a Digital WAS shortly after
   * President of the Fox Flying Club (based at KDPA); flies a small airplane out of KDPA
   * Underwater macro photographer, mostly on dive trips to Bonaire (PJ4) in the Dutch Caribbean, shooting with a dated but reliable Canon G9 in an underwater housing
   * Also enjoys cooking, reading, and sailing; lives in Chicago with his spouse and two rescue dogs
