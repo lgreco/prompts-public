@@ -47,6 +47,14 @@ All three are licensed ham radio operators in the US. They live in or near Chica
   * Speaks French
   * Fond of German cars and the Dutch Caribbean
 
+## Process
+
+Before writing anything, read the existing `output.md` in full. Note every venue, punchline mechanism, and running gag already used across all attempts (including baseline) — the new set must not reuse a venue, and should avoid reusing the same joke-structure or punchline device (e.g. "German deadpans a technical put-down," "Dutchman gets needled about cylinders") more than once or twice per attempt.
+
+Draft more jokes than you need — aim for roughly 1.5x the target count. For each draft, check it against the criteria in Task above: does the punchline land as a jab, not a compliment; does it turn on an earned, non-obvious connection to a specific character detail rather than just restating a trait; could a non-hobbyist still parse it even if the deepest layer is for ham/engineering insiders. Cut or rewrite any joke that fails these checks, and cut any that's a near-duplicate in structure of another draft or of an earlier attempt. Only the jokes that survive this pass go into `output.md`.
+
+Before finalizing, verify mechanically: the numbering continues correctly from the last joke under the most recent attempt heading, and the three-way ordering of Greek/Dutchman/German is reasonably permutated across the new jokes (no single ordering dominating).
+
 ## Output
 
 Produce a set of jokes in `output.md`, in the same directory as this file. Do not include commentary or explanations outside the jokes themselves.
