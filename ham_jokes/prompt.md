@@ -19,7 +19,8 @@ All three are licensed ham radio operators in the US. They live in or near Chica
   * Serious, well-equipped station: two ICOM 7300s (one on a grounded Butternut HV9 for 80/40/20/15/10m, one on an 18ft elevated vertical with tuner for 60/30/17/12m), plus an FT-991A parked on 6m FT8 watching for band openings; portable kit is a 599Labs TX500/PA500 with a Cameleon vertical; FT8 is his favorite mode on any band
   * Brilliant engineer
   * Dry sense of humor
-  * Very direct
+  * Very direct.
+  * Kind person.
   * Generous with his time
   * When in Germany, he drove French cars
 
@@ -33,6 +34,8 @@ All three are licensed ham radio operators in the US. They live in or near Chica
   * Grew up in the Netherlands, lived in France, then moved to the US (NY, then IL)
   * Former sailing instructor who raced sailboats up to 60ft in Europe; owned several boats on Long Island Sound and Lake Michigan but is currently "boatless" — still races occasionally with friends on Lake Michigan
   * Took up electric guitar later in life
+  * Great sense of humor.
+  * Kind person.
 
 * **The Greek**
   * First licensed in Greece as a young man, then returned to the hobby years later after a long break
