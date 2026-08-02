@@ -68,6 +68,20 @@
 
 30. A Greek, a German, and a Dutchman walk into the club potluck, where the Greek is running the kitchen. The German inspects the plating the way he'd inspect a wiring harness — nothing crossed, nothing loose. The Dutchman asks what pairs best with food this good, presumably something with more than four cylinders. The Greek hands him a fork and says, "Silence pairs best. Try it."
 
+# Sixth attempt
+
+31. A Dutchman, a Greek, and a German walk into the club's rented Oktoberfest tent for the fall meeting. The Dutchman orders the biggest stein on the menu, then asks about a bulk rate. The Greek orders wine instead and starts negotiating the vintage with the waiter. The German, checking his pour against the liter line etched into the glass, says, "This is the only exchange all night that's actually verified."
+
+32. A Greek, a German, and a Dutchman walk into a dog park with the Greek's two rescue dogs off leash. The German asks if they're on any kind of feeding schedule. The Dutchman crouches to pet one and asks if it came with papers proving a pedigree. The Greek clips the leash back on and says, "They came with something better — a rescue story. Yours came with a car payment."
+
+33. A German, a Greek, and a Dutchman walk into a dive shop hunting for a replacement battery for the Greek's Canon G9 housing. The Dutchman asks why he doesn't just buy a newer camera. The Greek says this one's outlasted three of his radios already. The German checks the O-ring seal without being asked and says, "Good. If this fails at sixty feet, at least the seal will outlive the argument about buying a new one."
+
+34. A German, a Dutchman, and a Greek walk into an ARES emergency-communications drill simulating a grid-down scenario. The German has his go-kit inventoried down to the spare fuses. The Greek checks in as the only station reachable that day on Washington Island, and only because the last ferry hasn't left yet. The Dutchman, still working his way through General-class material, says, "So the actual emergency plan for your grid is the ferry schedule. At least mine's just a study guide."
+
+35. A Greek, a Dutchman, and a German walk through the Chicago boat show. The Dutchman lingers at a sixty-footer like the ones he used to race, before boatless became permanent. The German reads the diesel spec sheet and clocks forty more horsepower than the last boat the Dutchman actually owned. The Greek, eyeing the marine electronics instead, says, "Forty more horses, zero more moorings. Sounds like the same excuse with a bigger number."
+
+36. A Dutchman, a German, and a Greek walk into the radio club's holiday white-elephant gift exchange. The Dutchman unwraps a die-cast car with an eight-cylinder engine and immediately eyes a better gift to steal. The German unwraps a roll of heat-shrink tubing and calls it, with no irony at all, the best gift of the night. The Greek unwraps a battered crystal radio kit and slides it across the table to the Dutchman without a word — appropriate, he says, for the only General class still in the room who might need the practice.
+
 # Baseline (generic, no specific context)
 
 1. A German, a Dutchman, and a Greek walk into a hotel front desk. The German asks for the exact check-in time, down to the minute. The Dutchman asks if there's a discount for arriving early. The Greek asks if the receptionist wants to hear about his cousin's hotel in Crete, which is much nicer.
