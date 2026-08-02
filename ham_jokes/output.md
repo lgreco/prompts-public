@@ -53,3 +53,27 @@
 23. A German, a Greek, and a Dutchman walk into the shack during a rare 6-meter opening. The German has had FT8 parked on the band all week waiting for exactly this. The Greek works the pileup calmly from his Washington Island grid. The Dutchman asks if a "band opening" is like a sale. The German doesn't look up from the waterfall and says, "Yes. Everything's discounted except patience, and you're still full price."
 
 24. A Greek, a German, and a Dutchman walk into a French bistro. The Greek orders in fluent French just to see who slips first. The German orders in English and says the wine list is the only menu here he trusts completely. The Dutchman, ordering in better French than either of them, asks the sommelier if the pairing works with anything over four cylinders. The German says, "Only if you can taste horsepower."
+
+# Fifth attempt
+
+25. A German, a Greek, and a Dutchman walk into the Siemens control room in Buffalo Grove. The German gives the tour of a loop he programmed himself. The Greek asks if it logs contacts the way LoTW does. The Dutchman asks how many cylinders the backup generator runs. The German says, "Zero. One flywheel, and better uptime than either of your hobbies."
+
+26. A Greek, a Dutchman, and a German walk into the Fox Flying Club's Saturday fly-in, where the Greek is doing his preflight walk-around as club president. The Dutchman asks how many cylinders are under the cowling. The German, reading the weight-and-balance sheet over the Greek's shoulder, says, "Four — and unlike your car, this one has to prove it can actually leave the ground."
+
+27. A Dutchman, a Greek, and a German walk into Winter Field Day, freezing in a tent. The Dutchman asks why they don't just work FT8 from a warm shack, the way the German's six-meter rig does back home. The Greek, breath fogging as he logs another digital contact, says warmth was never a multiplier. The German, thawing his hands over the TX500 before keying up, says, "Neither is complaining. Check the rules again."
+
+28. A Dutchman, a German, and a Greek walk into the club's antenna range day. The Dutchman parks his newest twelve-cylinder toy next to the German's grounded Butternut HV9 and asks which one actually performs better. The German says the vertical is quieter, cheaper to run, and doesn't need an oil change every three months. The Greek, reading the analyzer, adds, "And it's the only one of the two under 1.5 to 1."
+
+29. A German, a Dutchman, and a Greek walk into the club meeting for the Greek's Bonaire slideshow. The Dutchman claims partial credit since Bonaire flies the Dutch flag. The German points out the only flag that matters underwater is the diver-down flag, and the Greek's the one who's actually been under it. The Greek clicks to the next macro shot and says, "Keep the flag. I'll keep the photos."
+
+30. A Greek, a German, and a Dutchman walk into the club potluck, where the Greek is running the kitchen. The German inspects the plating the way he'd inspect a wiring harness — nothing crossed, nothing loose. The Dutchman asks what pairs best with food this good, presumably something with more than four cylinders. The Greek hands him a fork and says, "Silence pairs best. Try it."
+
+# Baseline (generic, no specific context)
+
+1. A German, a Dutchman, and a Greek walk into a hotel front desk. The German asks for the exact check-in time, down to the minute. The Dutchman asks if there's a discount for arriving early. The Greek asks if the receptionist wants to hear about his cousin's hotel in Crete, which is much nicer.
+
+2. A Dutchman, a Greek, and a German walk into a bakery. The Dutchman asks for the day-old bread, cheaper. The Greek asks for enough pastries to feed a family that isn't there. The German asks for exactly one, and eats it standing at the counter so nobody mistakes him for lingering.
+
+3. A Greek, a German, and a Dutchman walk into a philosophy lecture. The Greek starts explaining the topic before the professor does. The German raises a hand to point out the syllabus said this material was covered last week. The Dutchman asks if attendance is optional, and if so, whether it's refundable.
+
+4. A German, a Dutchman, and a Greek walk into a family reunion. The German brings a schedule. The Dutchman brings the bill, split evenly. The Greek brings forty cousins nobody invited, and somehow it's still not enough food.

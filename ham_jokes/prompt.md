@@ -51,4 +51,7 @@ All three are licensed ham radio operators in the US. They live in or near Chica
 
 Produce a set of jokes in `output.md`, in the same directory as this file. Do not include commentary or explanations outside the jokes themselves.
 
+
 Write each joke in the classic "walked into a bar" form: "A Greek, a Dutchman, and a German walk into `<venue>`" (choose a fitting venue per joke — it doesn't need to be a bar). Permutate the order of the three nationalities across jokes so no single ordering dominates. Number the jokes in the order generated, continuing from the highest-numbered joke already under the most recent attempt heading in `output.md`. Add a new heading above the new jokes naming this the next attempt (e.g. `# Second attempt`) — do not overwrite or remove earlier attempts.
+
+For baseline, write a few jokes about a German, a Dutchman, and a Dutch, absent of context given above for the specific individuals.
