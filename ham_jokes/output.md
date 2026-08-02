@@ -82,6 +82,20 @@
 
 36. A Dutchman, a German, and a Greek walk into the radio club's holiday white-elephant gift exchange. The Dutchman unwraps a die-cast car with an eight-cylinder engine and immediately eyes a better gift to steal. The German unwraps a roll of heat-shrink tubing and calls it, with no irony at all, the best gift of the night. The Greek unwraps a battered crystal radio kit and slides it across the table to the Dutchman without a word — appropriate, he says, for the only General class still in the room who might need the practice.
 
+# Seventh attempt
+
+37. A Greek, a Dutchman, and a German walk into a vintage radio collectors' expo. The Dutchman asks if his month-old HF rig counts as vintage yet. The German says ask again in forty years, if it's still transmitting. The Greek, polishing the dial on the ICOM 730 he's owned since before the Dutchman had a US callsign, says, "Ask again once you've upgraded past General."
+
+38. A Greek, a German, and a Dutchman walk into a Saturday tower-raising for the club's new repeater. The German, running it as Build Club Lead, checks the guy-wire tension twice before anyone touches the mast. The Dutchman is already three rungs up before the safety check clears. The Greek holds the come-along steady and says patience was never his strong suit. The German, still watching the tension gauge, says, "Good thing gravity doesn't grade on enthusiasm."
+
+39. A Dutchman, a Greek, and a German walk into a French conversation meetup near the office. The Dutchman and the Greek trade idioms neither of them learned from a phrasebook. The German, waiting for someone to translate, says the only language he kept fluent after the military is whatever dialect a service manual is written in. The Dutchman switches back to English just for him and says, "Relax — the manual's fluent in one thing. We're fluent in getting out of trouble in three."
+
+40. A Dutchman, a German, and a Greek walk into the Greek's kitchen for a dinner he insisted on cooking himself. The Dutchman asks if the recipe has a spec sheet. The German tastes a spoonful before it's plated and says the seasoning is calibrated tighter than half the gear at the club. The Greek waves them both to the table and says, "Eat. In this house, the only thing that gets a compliment before it's earned is a Field Day contest claim."
+
+41. A German, a Greek, and a Dutchman walk into an IT security conference where the Dutchman's badge is the only one that says "Executive." The Greek asks if the title comes with better encryption than the Netherlands net. The German, reading over the badge, says the only thing he's ever needed decrypted was a wiring diagram nobody bothered to label — no keynote required.
+
+42. A German, a Dutchman, and a Greek walk into the Dutchman's home office mid-conference call, DMR hotspot still keyed up in the background. The German asks if the Netherlands net always interrupts his executive meetings. The Greek says at least someone on that call is getting confirmed contacts. The Dutchman mutes himself half a second too late and says, "In my defense, that net has better attendance than most of my meetings."
+
 # Baseline (generic, no specific context)
 
 1. A German, a Dutchman, and a Greek walk into a hotel front desk. The German asks for the exact check-in time, down to the minute. The Dutchman asks if there's a discount for arriving early. The Greek asks if the receptionist wants to hear about his cousin's hotel in Crete, which is much nicer.
