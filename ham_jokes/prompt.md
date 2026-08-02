@@ -36,7 +36,7 @@ All three are licensed ham radio operators in the US. They live in or near Chica
 
 * **The Greek**
   * First licensed in Greece as a young man, then returned to the hobby years later after a long break
-  * Background in Physics and Computer Engineering; career in higher education as professor, dean, and now provost
+  * Background in Physics and Computer Engineering; career in higher education as professor, dean, etc
   * Runs two stations, both built around ICOM 7300s: one in Chicago, one on Washington Island, WI — a rare, sparsely-hammed grid (EN65mj, USIA WI001L) reachable only by ferry, which makes him a minor DX celebrity a few times a year
   * A collector at heart: still owns and occasionally fires up his first radio (an ICOM 730), plus a fully operational Collins KWM-1; portable ops run through a well-worn ICOM 706
   * QSLs almost exclusively via LOTW nowadays — except for Washington Island activations, where he still does paper cards
