@@ -84,7 +84,7 @@
 
 # Seventh attempt
 
-37. A Greek, a Dutchman, and a German walk into a vintage radio collectors' expo. The Dutchman asks if his month-old HF rig counts as vintage yet. The German says ask again in forty years, if it's still transmitting. The Greek, polishing the dial on the ICOM 730 he's owned since before the Dutchman had a US callsign, says, "Ask again once you've upgraded past General."
+37. A Greek, a Dutchman, and a German walk into a vintage radio collectors' expo. The Dutchman asks if his month-old HF rig counts as vintage yet. The German says ask again in forty years, if it's still transmitting. The Greek, polishing the dial on the ICOM 730 he's owned since before the Dutchman had a US callsign, says, "Ask again once it's outlived a couple of band plan changes."
 
 38. A Greek, a German, and a Dutchman walk into a Saturday tower-raising for the club's new repeater. The German, running it as Build Club Lead, checks the guy-wire tension twice before anyone touches the mast. The Dutchman is already three rungs up before the safety check clears. The Greek holds the come-along steady and says patience was never his strong suit. The German, still watching the tension gauge, says, "Good thing gravity doesn't grade on enthusiasm."
 
